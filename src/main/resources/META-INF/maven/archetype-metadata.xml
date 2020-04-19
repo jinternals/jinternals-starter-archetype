@@ -1,0 +1,67 @@
+
+<archetype-descriptor name="${artifactId}">
+    <requiredProperties>
+        <requiredProperty key="classPrefix"/>
+        <requiredProperty key="methodPrefix" >
+            <defaultValue>
+                ${classPrefix.substring(0,1).toLowerCase()}${classPrefix.substring(1)}
+            </defaultValue>
+        </requiredProperty>
+        <requiredProperty key="propertyPrefix">
+            <defaultValue>
+                ${artifactId.toLowerCase().replaceAll("-", ".")}
+            </defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <modules>
+        <module id="${rootArtifactId}-core" dir="__rootArtifactId__-core" name="${rootArtifactId}-core">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-autoconfigure" dir="__rootArtifactId__-autoconfigure" name="${rootArtifactId}-autoconfigure">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-starter" dir="__rootArtifactId__-starter" name="${rootArtifactId}-starter">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
