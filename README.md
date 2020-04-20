@@ -1,8 +1,11 @@
 # jinternals-starter-archetype
 
+#### 1. Build archetype
 ```shell script
     mvn clean install
 ```
+
+#### 2. Generate starter project from archtype
 
 ```shell script
     mvn archetype:generate                              \
